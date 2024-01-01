@@ -1,0 +1,86 @@
+---
+import Layout from "@layouts/Default.astro";
+import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro";
+import MobileSocials from "@components/home/MobileSocials.astro";
+import { Pill } from "@eliancodes/brutal-ui";
+import { Button } from "@eliancodes/brutal-ui";
+import { Card } from "@eliancodes/brutal-ui";
+
+const builtWith = [
+  { name: "網頁開發", url: "" },
+  { name: "3D 開發", url: "" },
+  {
+    name: "區塊鏈",
+    url: "",
+  },
+  { name: "科普", url: "" },
+  { name: "自媒體", url: "" },
+];
+---
+
+<Layout
+  title="Home"
+  pageTitle="Brutal Theme | Home"
+  description="Brutal is a minimalistic, neobrutalism theme for Astro."
+>
+  <main class="bg-pink p-6">
+    <MobileSocials />
+    <section id="about" class="grid md:grid-cols-8 gap-8 mt-4">
+      <h2 class="hidden">About Brutal</h2>
+      <div class="col-span-4">
+        <Card>
+          <div class="flex flex-col justify-between items-start gap-4">
+            <p class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl">
+              最簡單的區塊鏈教學 <a
+                class="text-white"
+                target="_blank"
+                href="https://astro.build/">區塊空間</a
+              >
+            </p>
+            <p class="mt-2 outfit text-xl md:text-3xl lg:text-5xl">
+              在這裡不會有最即時的資訊，但會有最白話的文章帶你了解區塊鏈
+            </p>
+            <Button target={"_self"} href="/blog/">
+              看文章開始了解區塊鏈的世界 &rarr;
+            </Button>
+          </div>
+        </Card>
+      </div>
+      <div class="col-span-2">
+        <Card>
+          <h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">關於我</h2>
+          <div class="rounded-lg overflow-hidden">
+            <img
+              src="https://whereissam.github.io/images/avatar_hub9a5f9b10369f3b37d3c0064b921b897_35972_240x0_resize_q90_h2_lanczos.webp"
+              alt=""
+            />
+          </div>
+
+          <ul class="flex gap-4 flex-wrap mt-10">
+            {
+              builtWith.map((item) => (
+                <li>
+                  <Pill>{item.name}</Pill>
+                </li>
+              ))
+            }
+          </ul>
+        </Card>
+      </div>
+      <!-- <div class="col-span-2">
+        <Card>
+          <h2 class="text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif">
+            What is Brutal?
+          </h2>
+          <p class="poppins">
+            Brutal is a theme built with Astro, UnoCSS by <a
+              href="https://www.elian.codes/">Elian</a
+            >. It's a simple, fast, and modern theme that is easy to use and
+            customize. Mainly meant to power blogs and personal websites.
+          </p>
+        </Card>
+      </div> -->
+    </section>
+    <RecentBlogPosts />
+  </main>
+</Layout>
