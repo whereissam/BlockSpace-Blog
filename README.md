@@ -1,117 +1,65 @@
-# Brutal - The neobrutalist Astro theme
+# Accessible Astro Starter
 
-Brutal is a minimal neobrutalist theme for [Astro](https://astro.build/). It's based on Neobrutalist Web Design, a movement that aims to create websites with a minimalistic and functional design. It has some integrations like Image Optimization, RSS, Sitemap, ready to get your SEO done right.
+![social-preview-image](https://user-images.githubusercontent.com/3909046/219942674-9894853e-def8-4180-84b8-6b577dacfcaa.png)
 
-The theme has no JavaScript integration out of the box, but can always be added of course.
+Accessible Astro Starter is a ready to use, SEO and a11y friendly blogging theme. It contains plenty of accessible components to build several page types, Tailwind CSS to help you build faster and example pages such as a dynamic Blog, 404, Markdown and MDX. This theme is designed to help you build your project faster and provide a solid base for accessibility!
 
-This template is based on [my own personal website](<https://www.elian.codes/>), with some more generic things added.
+🚀 [Live Preview](https://accessible-astro.netlify.app/)
 
-## Usage
+## ♿ (Accessibility) Features
 
-You can bootstrap a new Astro project using Brutal with the following command:
+- Astro 4.0
+- Tailwind CSS support
+- Prettier integration with `prettier-plugin-astro` and `prettier-plugin-tailwind`
+- ESLint integration with strict accessibility settings for `eslint-plugin-jsx-a11y`
+- Markdown and MDX support with examples included in the theme
+- Uses the awesome `astro-icon` package for the icons
+- Excellent Lighthouse/PageSpeed scores
+- Accessible landmarks such as `header`, `main`, `footer`, `section` and `nav`
+- Outline focus indicator which works on dark and light backgrounds
+- Several `aria` attributes which provide a better experience for screen reader users
+- `[...page].astro` and `[post].astro` demonstrate the use of dynamic routes and provide a basic blog with breadcrumbs and pagination
+- `404.astro` provides a custom 404 error page which you can adjust to your needs
+- `Header.astro` component included in the `DefaultLayout.astro` layout
+- `Footer.astro` component included in the `DefaultLayout.astro` layout
+- `SkipLinks.astro` component to skip to either the main menu or the main content
+- `Navigation.astro` component with keyboard accessible (dropdown) navigation (arrow keys, escape key)
+- `ResponsiveToggle.astro` component with an accessible responsive toggle button for the mobile navigation
+- `DarkMode.astro` component toggle with accessible button and a user system preferred color scheme setting
+- `SiteMeta.astro` SEO component for setting custom meta data on different pages
+- `.sr-only` utility class for screen reader only text content (hides text visually)
+- `prefers-reduced-motion` disables animations for users that have this preference turned on
+- Ships with many components such as Accordions, Breadcrumbs, Modals, Pagination [and many more](https://accessible-astro.dev/accessible-components)
+- A collection of utility classes such as breakpoints, button classes, font settings, resets and outlines in `src/assets/scss/base`
+- View Transitions (⚠️ see [astro-docs](https://docs.astro.build/en/guides/view-transitions/#accessibility) for accessibility considerations)
 
-```bash
-# npm 6.x
-npx create astro@latest --template eliancodes/brutal
+## 🚀 Getting started
 
-# npm 7+
-npx create astro@latest -- --template eliancodes/brutal
+Clone this theme locally and run any of the following commands in your terminal:
 
-# pnpm
-pnpm dlx create-astro --template eliancodes/brutal
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:4321`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
 
-# yarn
-yarn create astro --template eliancodes/brutal
-```
+## 📦 Other Accessible Astro projects
 
-### Commands
+- [Accessible Astro Dashboard](https://github.com/markteekman/accessible-astro-dashboard/)
+- [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components/)
 
-All commands are run from the root of the project, from a terminal:
+## ❤️ Helping out
 
-(Here I use PNPM, no problem if you use NPM or Yarn)
+If you find that something isn't working right then I'm always happy to hear it to improve this starter! You can contribute in many ways and forms. Let me know by either:
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `pnpm install`      | Installs dependencies                              |
-| `pnpm dev`          | Starts local dev server at `localhost:3000`        |
-| `pnpm build`        | Build your production site to `./dist/`            |
-| `pnpm preview`      | Preview your build locally, before deploying       |
-| `pnpm astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `pnpm astro --help` | Get help using the Astro CLI                       |
+1. [Filing an issue](https://github.com/markteekman/accessible-astro-starter/issues)
+2. [Submitting a pull request](https://github.com/markteekman/accessible-astro-starter/pulls)
+3. [Starting a discussion](https://github.com/markteekman/accessible-astro-starter/discussions)
+4. [Buying me a coffee!](https://www.buymeacoffee.com/markteekman)
 
-## Integrations
+## ☕ Thank you!
 
-### UnoCSS
+A big thank you to the creators of the awesome Astro static site generator and to all using this starter to make the web a bit more accessible for all people around the world :)
 
-In this theme, I'm using [UnoCSS](https://uno.antfu.me/) to generate the CSS. It's a utility-first CSS framework that uses a single class to style elements. It's very easy to use and has a lot of features. It's setup to be completely compatible with TailwindCSS, with the advantage of being able to use PureCSS icons. You can always switch out UnoCSS for TailwindCSS if you want to, without breaking the general styles.
-
-### Sitemap
-
-To generate the sitemap, you don't need to do anything. It's automatically generated when you build your site. You'll just need to switch out the `site` on `astro.config.mjs` to your own.
-
-```js title="astro.config.mjs"
-import { defineConfig } from 'astro/config';
-
-export default defineConfig({
-  site: 'https://example.com',
-});
-```
-
-### RSS
-
-The RSS feed is automatically generated from the Markdown files in the `src/content/blog` folder. You can ofcourse completely change this to your own needs.
-
-The RSS will output to `https://example.com/feed.xml` by default. You can change this, by renaming `src/pages/feed.xml.js`.
-
-### Image
-
-## Components
-
-### `components/blog/`
-
-This directory contains all components for the blog.
-
-### `components/errors/`
-
-This directory contains all error components.
-
-#### `components/errors/404.astro`
-
-This component is used when a page is not found.
-
-### `components/generic/`
-
-This directory contains all generic components, reused over multiple pages.
-
-### `components/home/`
-
-This directory contains all components for the home page.
-
-### `components/layout/`
-
-This directory contains all layout components. For instance, the header and footer and `<head>` section.
-
-### Colors
-
-The theme has a few colors that you can use in the included components.
-
-- red
-- blue
-- green
-- yellow
-- pink
-- purple
-- orange
-- teal
-- cyan
-- lime
-- emerald
-- fuchsia
-- violet
-- rose
-- sky
-- amber
-
-More colors can be added in `astro.config.mjs` in the `colors` array.
-
-If you need more from this theme, don't hesitate to open an issue or reach out to me!
+[![buymeacoffee-button](https://user-images.githubusercontent.com/3909046/150683481-be070424-7bb0-4dd7-a3cb-43b5605163f5.png)](https://www.buymeacoffee.com/markteekman)

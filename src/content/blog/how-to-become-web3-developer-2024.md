@@ -1,14 +1,15 @@
 ---
 title: 在 2024 年要怎麼成為 web3 開發者
 pubDate: 01/01/2024 12:05
-author: "Sam"
+author: 'Sam'
 tags:
   - 開發者
   - 網頁開發
   - Web3
-imgUrl: "../../assets/web3Developer.jpeg"
+imgUrl: '../../assets/web3Developer.jpeg'
 description: 透過這篇文章，我將分享我學習 Web3 開發的經驗，包括如何找尋資源以及更有效地學習區塊鏈知識的建議。無論是免費還是付費資源，我都將透過自學的角度分享，可以讓有心想成為開發者的朋友們少走一點彎路，後續會講到實際在區塊鏈產業裡面工作的一些心得分享。
-layout: "../../layouts/BlogPost.astro"
+# layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/MarkdownLayout.astro'
 ---
 
 ![](https://neural.love/cdn/ai-photostock/1eea62b4-5fcc-6572-95e3-455eae6621f4/1.jpg?Expires=1709251199&Signature=evlDypzlmrnspBEmWLvlhKuOG-HJdEe011ctp4rk8Z02HdrWqJyXvPCBQTzQdN2CK9U1Tgddq3pQB3NxR7cBMw2~KoYTXB1zkNoIiEnua8gqOKLbI6G0sckMp9YefBvsA6PL5zLiG7piIAlD~yAM8muoiK6dPpE1HR2S4nrgsWsUCss2W4LNKphX~t-AuQe8fyfqDuuoAZQuxmGkq3V~5RdNnPHlDH6ncOfYCGdA7s1s3dQe9vkf3qcVTHjGBNXYdzfsP9da2oTns-PCN9bMObxIifqnuJgNnl3LK4f8RzDUUwk3FXlUXE~L5eWPJmBWdxH1HArzPk-PGxkTWgn-Dg__&Key-Pair-Id=K2RFTOXRBNSROX)
@@ -117,7 +118,7 @@ Web3 開發者擁有多樣的角色，涵蓋區塊鏈開發、智能合約開發
 - [DeFi Developer Road Map](https://github.com/OffcierCia/DeFi-Developer-Road-Map)
   - 收集了最好的 DeFi 和區塊鏈的研究技術和一些工具
 - [北京大学肖臻老师《区块链技术与应用》公开课](https://www.bilibili.com/video/BV1Vt411X7JF?p=1&vd_source=3b80b4f0da48c2c4373dca14d6488e7f)
-- [Web3 零基础Dapp项目开发入门-学习蓝图【2024新版】](https://triangular-jitterbug-cd5.notion.site/Web3-Dapp-2024-9ad05eb869a34983bb87c073faedc5a6)
+- [Web3 零基础 Dapp 项目开发入门-学习蓝图【2024 新版】](https://triangular-jitterbug-cd5.notion.site/Web3-Dapp-2024-9ad05eb869a34983bb87c073faedc5a6)
 - [Web3 富翁区块学院](https://www.youtube.com/@web3gogogo/videos)
   - Solidity / Defi / 區塊鏈知識
 - [Buidler DAO - Youtube](https://www.youtube.com/channel/UCO9TRqgc6Q-MMGy72_eGPNA)

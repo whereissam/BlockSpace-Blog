@@ -1,22 +1,27 @@
 ---
+import Feature from '../../components/Feature.astro'
+
 interface Props {
-  headings: Array<Object>;
+  headings: Array<Object>
 }
 
-const { headings } = Astro.props;
+const { headings } = Astro.props
 ---
 
 <aside>
-  <nav class='hidden lg:block sticky top-6'>
+  <nav
+    class="sticky top-40 mx-4 mt-20 hidden w-[200px] min-w-[400px] rounded-2xl border-2 border-sky-500 p-4 lg:mb-5 lg:block"
+  >
+    <h2 class="pl-2">Table of Contents:</h2>
     <ul>
       {
         headings.map((heading: any) => (
-          <li class='py-1'>
+          <li class="py-1">
             {[...Array(heading.depth - 1)].map((_, _i) => (
-              <span class='inline-block w-4' />
+              <span class="inline-block w-4" />
             ))}
             <a
-              class='hover:text-stone transition-all duration-150 ease-in-out text-dark poppins'
+              class="hover:text-stone poppins text-white transition-all duration-150 ease-in-out"
               href={`#${heading.slug}`}
             >
               {heading.text}

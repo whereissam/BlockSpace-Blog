@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { src = '/avatar.webp' } = Astro.props
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+          <slot><span class="text-gradient">區塊空間 <br /></span> 最簡單的區塊鏈教學</slot>
+        </h1>
+        <a href="/blog">
+          <button class="btn group relative inline-block h-[80px] w-[250px] border-none font-medium">
+            <span
+              class="duration-400 bgColor absolute inset-0 h-full w-full translate-x-2 translate-y-2 transform rounded-md transition ease-out group-hover:-translate-x-0 group-hover:-translate-y-0"
+            ></span>
+            <span
+              class="absolute inset-0 h-full w-full rounded-md bg-[#E84115] group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:bg-[#F7DE8E]"
+            ></span>
+
+            <span class="relative text-lg font-black text-white group-hover:text-black">快去了解區塊鏈的世界</span>
+          </button>
+        </a>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <div class="relative h-72 w-72">
+          <img class="rounded-full border border-gray-100 shadow-sm lg:block" src={src} alt="" decoding="async" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bgColor {
+    background: var(--border-color);
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+import CallToAction from './CallToAction.astro'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer id="main-footer">
+  <div class="container">
+    <!-- <h2 class="hidden">Footer</h2> -->
+
+    <section id="about" class="mt-4 grid gap-8 md:grid-cols-8">
+      <h2 class="hidden">About BlockSpace</h2>
+      <div class="col-span-4">
+        <img class="mb-10" src="/src/assets/brand-white.svg" alt="" />
+        <h6 class="ml-10">關於</h6>
+        <div class="ml-10 text-justify leading-loose">
+          <ul class="space-y-2">
+            <li>區塊鏈內容深耕</li>
+            <li>區塊鏈 + AI 的結合工具</li>
+            <li>區塊鏈相關的活動</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-span-2 ml-10 leading-loose">
+        <h6>區塊鏈資訊</h6>
+        <ul class="space-y-2">
+          <li><a href="/blog/tags/教學/">教學</a></li>
+          <li><a href="/blog/tags/新手/">新手</a></li>
+        </ul>
+      </div>
+      <div class="col-span-2 ml-10 leading-loose">
+        <h6>快速連結</h6>
+        <ul class="footer-links space-y-2">
+          <li><a href="https://t.me/theblockspaces">加入 Telegram</a></li>
+          <li>
+            <a href="https://www.instagram.com/the.blockspace">追蹤 Instagram</a>
+          </li>
+          <li><a href="https://twitter.com/bungeegumeee">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/sam-hbz/">Linkedin</a></li>
+          <li><a href="https://github.com/whereissam">Github</a></li>
+          <li><a href="https://portaly.cc/theblockspace">Portaly</a></li>
+        </ul>
+      </div>
+    </section>
+    <p class="outfit ml-10 py-5">2024 © BlockSpace All rights reserved</p>
+  </div>
+</footer>
+
+<style lang="scss" is:global>
+  @use '../assets/scss/base/breakpoint' as *;
+  @use '../assets/scss/base/outline' as *;
+
+  #main-footer {
+    > .container {
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 100px;
+      margin-top: 40px;
+    }
+
+    nav {
+      > ul {
+        display: flex;
+        gap: 1.5rem;
+        // list-style-type: none;
+
+        a,
+        button {
+          text-decoration: none;
+          font-size: 1.125rem;
+          line-height: 1.6875rem;
+        }
+
+        a:hover,
+        a:focus,
+        .is-active,
+        .has-dropdown > button:hover,
+        .has-dropdown > button:focus {
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-decoration-style: wavy;
+          text-underline-offset: 7px;
+        }
+
+        .is-active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+</style>

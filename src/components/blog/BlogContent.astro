@@ -1,17 +1,35 @@
 ---
 interface Props {
-  content: any;
+  content: any
 }
 
-const { content } = Astro.props;
+const { content } = Astro.props
+console.log('content', content)
 ---
 
-<article class='prose-slate w-sm md:w-prose md:prose poppins'>
-  <a href='/blog/' title='Back to blog'>&larr; Back to blog</a>
-  <p class='text-slate text-sm md:text-base'>
+<article class="prose prose-h2:text-red-500 w-sm md:w-prose md:prose">
+  <a href="/blog/" title="Back to blog" class="prose-h1:text-red-500">&larr; Back to blog</a>
+  <p class="text-slate text-sm md:text-base">
     Published on {content.pubDate} by {content.author}
   </p>
+  <h1>{content.title}</h1>
+  <img src={content.imgUrl} alt="img" />
   <slot />
-  <p class='text-slate'>Written by {content.author}</p>
-  <a href='/blog/' title='Back to blog'>&larr; Back to blog</a>
+  <p class="text-slate">Written by {content.author}</p>
+  <a href="/blog/" title="Back to blog">&larr; Back to blog</a>
 </article>
+
+<style>
+  /* article.content h1 {
+    color: yellow;
+    size: 100px;
+  }
+  article.content h2 {
+    color: red;
+    size: 100px;
+  }
+  article.content ol > li {
+    color: blue;
+    size: 50px;
+  } */
+</style>

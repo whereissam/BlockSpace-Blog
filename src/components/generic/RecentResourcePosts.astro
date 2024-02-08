@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import ResourceList from "../resource/ResourceList.astro";
+import { Card } from "@eliancodes/brutal-ui";
+import { Button } from "@eliancodes/brutal-ui";
+
+interface Props {
+  count?: number;
+}
+
+const { count } = Astro.props;
+
+const posts = await getCollection("resource").then((posts) =>
+  posts.reverse().slice(0, count ?? 3)
+);
+---
+
+<section class="mt-8">
+  <Card>
+    <div class="flex justify-between items-start">
+      <h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">資源彙整</h2>
+      <div class="hidden md:block">
+        <Button href="/resource/">去文章區 &rarr;</Button>
+      </div>
+      <div class="block md:hidden">
+        <Button href="/resource/">去文章區</Button>
+      </div>
+    </div>
+    <ResourceList posts={posts} />
+  </Card>
+</section>

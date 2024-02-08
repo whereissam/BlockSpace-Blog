@@ -1,17 +1,51 @@
 ---
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
-import Layout from '@layouts/Default.astro';
-import ErrorPage from '@components/errors/404.astro';
+import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 
-<Layout
-  title='Page Not Found'
-  description='Page not found'
-  classList='h-full'
-  pageTitle='Page Not Found!'
->
-  <main class='bg-blue px-6 py-24'>
-    <ErrorPage />
-    <RecentBlogPosts />
+<DefaultLayout title="404">
+  <main class="container flex h-screen w-full flex-col items-center justify-center bg-[#1A2238]">
+    <div class="relative">
+      <h1 class="text-9xl font-extrabold tracking-widest text-white">404</h1>
+      <div class="absolute bottom-4 left-16 rotate-12 rounded bg-[#FF6A3D] px-2 text-sm">Page Not Found</div>
+    </div>
+    <!-- <a href="/">
+      <button class="btn group relative mt-5 inline-block h-[80px] w-[250px] border-none font-medium">
+        <span
+          class="duration-400 bgColor absolute inset-0 h-full w-full translate-x-2 translate-y-2 transform rounded-md transition ease-out group-hover:-translate-x-0 group-hover:-translate-y-0"
+        ></span>
+        <span
+          class="absolute inset-0 h-full w-full rounded-md bg-[#E84115] group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:bg-[#F7DE8E]"
+        ></span>
+
+        <span class="relative text-lg font-black text-white group-hover:text-black"> Go Home</span>
+      </button>
+    </a> -->
+    <a href="/" class="mt-5 border-none">
+      <button
+        class="group relative inline-block text-sm font-medium text-[#FF6A3D] focus:outline-none focus:ring active:text-orange-500"
+      >
+        <span
+          class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
+        ></span>
+
+        <span class="relative block border border-current bg-[#1A2238] px-8 py-3">
+          <!-- <router-link to="/">Go Home</router-link> -->
+          Go Home
+        </span>
+      </button>
+    </a>
+    <!-- <button class="mt-5">
+      <a
+        class="group relative inline-block text-sm font-medium text-[#FF6A3D] focus:outline-none focus:ring active:text-orange-500"
+      >
+        <span
+          class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
+        ></span>
+
+        <span class="relative block border border-current bg-[#1A2238] px-8 py-3">
+          <router-link to="/">Go Home</router-link>
+        </span>
+      </a>
+    </button> -->
   </main>
-</Layout>
+</DefaultLayout>

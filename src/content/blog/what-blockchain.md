@@ -1,14 +1,14 @@
 ---
-title: "蛤 ? 區塊鏈"
+title: '蛤 ? 區塊鏈'
 pubDate: 10/27/2023 14:25
-author: "Sam"
+author: 'Sam'
 tags:
   - 區塊鏈
   - 教學
   - 新手
-imgUrl: "../../assets/blockchain-intro.jpeg"
+imgUrl: '../../assets/blockchain-intro.jpeg'
 description: 探討了區塊鏈技術的重要性，特別強調了區塊鏈的技術特性和經濟特性。它介紹了區塊鏈的運作方式，以及如何在不同應用場景中應用這一技術，包括支付系統、內容分享平台和 NFT 忠誠計劃
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/MarkdownLayout.astro'
 ---
 
 ![](https://cdn.leonardo.ai/users/021f1954-d139-4b3d-921c-68c3515f13f2/generations/e5b85e61-2d21-45f7-b684-0916c0fdfb32/Leonardo_Diffusion_XL_blockchain_question_mark_abstract_2.jpg?w=512)
@@ -87,7 +87,7 @@ Google、Mega、ICloud
 - BackerPay 貝殼支付 - 師園鹽酥雞
 - 區塊鏈運用案例 - 產險聯盟鏈
 - Matters 去中心化內容分平台
-- 星巴克有史以來最大NFT忠誠計劃，為何只能算「Web2.5」？
+- 星巴克有史以來最大 NFT 忠誠計劃，為何只能算「Web2.5」？
 - Numbers Protocol — 去中心化影像網絡
 
 以現在的區塊鏈來講絕大部分的創新都還是發生在針對區塊鏈技術的金融上面，對一般使用者還沒有非常直接的感受，我這邊以四個例子是貼近普通使用者的應用場景
