@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "bun build",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
